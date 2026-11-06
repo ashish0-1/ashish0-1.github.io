@@ -283,6 +283,24 @@ style="width:160px;height:160px;object-fit:cover;border-radius:50%;border:4px so
 </div>
     </div>
 
+    
+<!--chart graph ke liye html start here -->
+<div style="background:white;padding:20px;border-radius:10px;margin-top:25px;">
+
+  <h3 style="margin-bottom:15px;">Investment Growth Chart</h3>
+
+  <p style="font-size:13px;color:#666;margin-bottom:15px;">
+    See how your SIP investment may grow over time.
+  </p>
+
+  <canvas id="sipGrowthChart"
+    style="width:100%;height:250px;display:block;">
+  </canvas>
+
+</div>
+ <!---chart graph ke liye html end here---->   
+
+    
     <p style="font-size:12px;color:#666;margin-top:18px;">
       Disclaimer: This calculator provides illustrative estimates only.
       Mutual fund returns are market-linked and are not guaranteed.
@@ -327,8 +345,73 @@ function calculateSIP() {
   document.getElementById("returnsBar").style.width = returnsPercent + "%";
   document.getElementById("investedPercent").textContent = investedPercent.toFixed(1) + "%";
   document.getElementById("returnsPercent").textContent = returnsPercent.toFixed(1) + "%";
+  drawSIPGrowthChart(p, years, monthlyRate);
 }
 
+//yaha se js ka graph chart js start hai 
+function drawSIPGrowthChart(p, years, monthlyRate) {
+  const canvas = document.getElementById("sipGrowthChart");
+  const ctx = canvas.getContext("2d");
+
+  const width = canvas.clientWidth;
+  const height = 250;
+
+  canvas.width = width;
+  canvas.height = height;
+
+  const points = [];
+
+  for (let year = 0; year <= years; year++) {
+    const months = year * 12;
+
+    const invested = p * months;
+
+    const future = monthlyRate === 0
+      ? invested
+      : p * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
+
+    points.push({
+      year: year,
+      value: future
+    });
+  }
+
+  const maxValue = Math.max(...points.map(point => point.value), 1);
+
+  const padding = 35;
+  const chartWidth = width - padding * 2;
+  const chartHeight = height - padding * 2;
+
+  ctx.clearRect(0, 0, width, height);
+
+  ctx.strokeStyle = "#dddddd";
+  ctx.lineWidth = 1;
+
+  ctx.beginPath();
+  ctx.moveTo(padding, padding);
+  ctx.lineTo(padding, height - padding);
+  ctx.lineTo(width - padding, height - padding);
+  ctx.stroke();
+
+  ctx.beginPath();
+
+  points.forEach((point, index) => {
+    const x = padding + (index / years) * chartWidth;
+    const y = height - padding - (point.value / maxValue) * chartHeight;
+
+    if (index === 0) {
+      ctx.moveTo(x, y);
+    } else {
+      ctx.lineTo(x, y);
+    }
+  });
+
+  ctx.strokeStyle = "#2675a6";
+  ctx.lineWidth = 3;
+  ctx.stroke();
+}
+  // yaha se js ka graph chart js end hai 
+  
 ["sipAmount", "sipYears", "sipRate"].forEach(function(id) {
   document.getElementById(id).addEventListener("input", calculateSIP);
 });
