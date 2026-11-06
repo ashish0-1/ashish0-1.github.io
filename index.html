@@ -269,10 +269,10 @@ style="width:160px;height:160px;object-fit:cover;border-radius:50%;border:4px so
        style="width:50%;background:#31a36b;height:100%;"></div>
 </div>
 
-      <div style="display:flex;justify-content:space-between;gap:10px;margin-top:12px;font-size:12px;">
-        <span>🔵 Invested</span>
-        <span>🟢 Estimated Returns</span>
-      </div>
+    <div style="display:flex;justify-content:space-between;gap:10px;margin-top:12px;font-size:12px;">
+  <span>🔵 Invested: <strong id="investedPercent">0%</strong></span>
+  <span>🟢 Returns: <strong id="returnsPercent">0%</strong></span>
+</div>
     </div>
 
     <p style="font-size:12px;color:#666;margin-top:18px;">
@@ -317,6 +317,8 @@ function calculateSIP() {
 
   document.getElementById("investedBar").style.width = investedPercent + "%";
   document.getElementById("returnsBar").style.width = returnsPercent + "%";
+  document.getElementById("investedPercent").textContent = investedPercent.toFixed(1) + "%";
+  document.getElementById("returnsPercent").textContent = returnsPercent.toFixed(1) + "%";
 }
 
 ["sipAmount", "sipYears", "sipRate"].forEach(function(id) {
