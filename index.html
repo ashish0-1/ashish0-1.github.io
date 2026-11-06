@@ -243,6 +243,14 @@ style="width:160px;height:160px;object-fit:cover;border-radius:50%;border:4px so
         <span>0%</span><span>20%</span>
       </div>
     </div>
+    <!--reset btn here start-->
+<div style="text-align:center;margin-top:20px;">
+  <button type="button" onclick="resetSIPCalculator()"
+    style="background:#17618b;color:white;border:none;padding:12px 25px;border-radius:8px;cursor:pointer;font-size:15px;">
+    ↻ Reset Calculator
+  </button>
+</div>
+    <!---reset btn here end --->
 
     <div style="background:white;padding:20px;border-radius:10px;margin-top:25px;">
       <p style="color:#666;">Estimated Future Value</p>
@@ -325,6 +333,16 @@ function calculateSIP() {
   document.getElementById(id).addEventListener("input", calculateSIP);
 });
 
+// js reset btn function here start
+
+function resetSIPCalculator() {
+  document.getElementById("sipAmount").value = 2000;
+  document.getElementById("sipYears").value = 10;
+  document.getElementById("sipRate").value = 12;
+
+  calculateSIP();
+}  
+  //js reset btn function end here
 calculateSIP();
 </script>
 
