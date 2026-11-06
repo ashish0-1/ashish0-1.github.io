@@ -204,51 +204,80 @@ style="width:160px;height:160px;object-fit:cover;border-radius:50%;border:4px so
 
   
  <!-- yaha se sip calculator suru ho rha hai -->
+
 <section id="sip-calculator">
   <h2 class="section-title">SIP Calculator | SIP कैलकुलेटर</h2>
 
   <p style="text-align:center;margin-bottom:25px;">
-    Calculate the estimated future value of your monthly SIP investment.
+    Calculate your estimated SIP investment growth.
   </p>
 
-  <div style="max-width:550px;margin:auto;background:#f0f5fa;padding:25px;border-radius:12px;">
+  <div style="max-width:650px;margin:auto;background:#f0f5fa;padding:25px;border-radius:14px;">
 
-    <label>Monthly SIP Amount (₹)</label>
-    <input type="number" id="sipAmount" value="2000" min="1"
-      style="width:100%;padding:12px;margin:8px 0 18px;border:1px solid #ccc;border-radius:6px;">
-
-    <label>Investment Period (Years)</label>
-    <input type="number" id="sipYears" value="10" min="1" max="50"
-      style="width:100%;padding:12px;margin:8px 0 18px;border:1px solid #ccc;border-radius:6px;">
-
-    <label>Expected Annual Return (%)</label>
-    <input type="number" id="sipRate" value="12" min="0" max="100" step="0.1"
-      style="width:100%;padding:12px;margin:8px 0 18px;border:1px solid #ccc;border-radius:6px;">
-
-    <button onclick="calculateSIP()"
-      style="width:100%;padding:14px;background:#123b60;color:white;border:0;border-radius:7px;font-size:16px;cursor:pointer;">
-      Calculate SIP
-    </button>
-
-    <div id="sipResult" style="display:none;margin-top:22px;background:white;padding:18px;border-radius:8px;">
-      <p>Invested Amount:</p>
-      <h3 id="investedAmount"></h3>
-
-      <p style="margin-top:12px;">Estimated Returns:</p>
-      <h3 id="estimatedReturns"></h3>
-
-      <p style="margin-top:12px;">Estimated Future Value:</p>
-      <h2 id="futureValue" style="color:#17618b;"></h2>
+    <div style="margin-bottom:24px;">
+      <label><strong>Monthly SIP Amount</strong></label>
+      <h3 id="sipAmountDisplay" style="color:#17618b;margin:8px 0;">₹2,000</h3>
+      <input type="range" id="sipAmount" min="500" max="50000"
+        step="500" value="2000" style="width:100%;accent-color:#17618b;">
+      <div style="display:flex;justify-content:space-between;font-size:12px;color:#666;">
+        <span>₹500</span><span>₹50,000</span>
+      </div>
     </div>
 
-    <p id="sipError" style="color:red;margin-top:12px;"></p>
+    <div style="margin-bottom:24px;">
+      <label><strong>Investment Period</strong></label>
+      <h3 id="sipYearsDisplay" style="color:#17618b;margin:8px 0;">10 Years</h3>
+      <input type="range" id="sipYears" min="1" max="40"
+        step="1" value="10" style="width:100%;accent-color:#17618b;">
+      <div style="display:flex;justify-content:space-between;font-size:12px;color:#666;">
+        <span>1 Year</span><span>40 Years</span>
+      </div>
+    </div>
+
+    <div style="margin-bottom:24px;">
+      <label><strong>Expected Annual Return</strong></label>
+      <h3 id="sipRateDisplay" style="color:#17618b;margin:8px 0;">12%</h3>
+      <input type="range" id="sipRate" min="0" max="20"
+        step="0.5" value="12" style="width:100%;accent-color:#17618b;">
+      <div style="display:flex;justify-content:space-between;font-size:12px;color:#666;">
+        <span>0%</span><span>20%</span>
+      </div>
+    </div>
+
+    <div style="background:white;padding:20px;border-radius:10px;margin-top:25px;">
+      <p style="color:#666;">Estimated Future Value</p>
+      <h2 id="futureValue" style="color:#17618b;font-size:30px;margin:8px 0;">₹0</h2>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px;">
+        <div style="background:#eaf3ff;padding:14px;border-radius:8px;">
+          <p style="font-size:12px;color:#555;">Invested Amount</p>
+          <h3 id="investedAmount">₹0</h3>
+        </div>
+        <div style="background:#e8f7ef;padding:14px;border-radius:8px;">
+          <p style="font-size:12px;color:#555;">Estimated Returns</p>
+          <h3 id="estimatedReturns">₹0</h3>
+        </div>
+      </div>
+
+      <h3 style="margin-top:25px;margin-bottom:12px;">Investment Breakdown</h3>
+
+      <div style="height:18px;background:#ddd;border-radius:20px;overflow:hidden;display:flex;">
+        <div id="investedBar" style="width:50%;background:#2675a6;"></div>
+        <div id="returnsBar" style="width:50%;background:#31a36b;"></div>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;gap:10px;margin-top:12px;font-size:12px;">
+        <span>🔵 Invested</span>
+        <span>🟢 Estimated Returns</span>
+      </div>
+    </div>
 
     <p style="font-size:12px;color:#666;margin-top:18px;">
-      Disclaimer: This calculator provides an illustrative estimate only.
-      Actual mutual fund returns are market-linked and are not guaranteed.
-      The calculation assumes monthly investments at the end of each month.
+      Disclaimer: This calculator provides illustrative estimates only.
+      Mutual fund returns are market-linked and are not guaranteed.
+      Actual returns may be higher or lower. Calculation assumes
+      monthly investments at the end of each month.
     </p>
-
   </div>
 </section>
 
@@ -258,22 +287,8 @@ function calculateSIP() {
   const years = Number(document.getElementById("sipYears").value);
   const rate = Number(document.getElementById("sipRate").value);
 
-  const error = document.getElementById("sipError");
-  const result = document.getElementById("sipResult");
-
-  error.textContent = "";
-  result.style.display = "none";
-
-  if (!Number.isFinite(p) || !Number.isFinite(years) ||
-      !Number.isFinite(rate) || p <= 0 ||
-      years < 1 || years > 50 || rate < 0 || rate > 100) {
-    error.textContent = "Please enter valid values.";
-    return;
-  }
-
   const months = years * 12;
   const monthlyRate = rate / 1200;
-
   const invested = p * months;
 
   const future = monthlyRate === 0
@@ -286,18 +301,28 @@ function calculateSIP() {
     return "₹" + Math.round(value).toLocaleString("en-IN");
   }
 
-  document.getElementById("investedAmount").textContent =
-    formatINR(invested);
+  document.getElementById("sipAmountDisplay").textContent = formatINR(p);
+  document.getElementById("sipYearsDisplay").textContent = years + " Years";
+  document.getElementById("sipRateDisplay").textContent = rate + "%";
 
-  document.getElementById("estimatedReturns").textContent =
-    formatINR(returns);
+  document.getElementById("investedAmount").textContent = formatINR(invested);
+  document.getElementById("estimatedReturns").textContent = formatINR(returns);
+  document.getElementById("futureValue").textContent = formatINR(future);
 
-  document.getElementById("futureValue").textContent =
-    formatINR(future);
+  const investedPercent = future > 0 ? (invested / future) * 100 : 100;
+  const returnsPercent = 100 - investedPercent;
 
-  result.style.display = "block";
+  document.getElementById("investedBar").style.width = investedPercent + "%";
+  document.getElementById("returnsBar").style.width = returnsPercent + "%";
 }
+
+["sipAmount", "sipYears", "sipRate"].forEach(function(id) {
+  document.getElementById(id).addEventListener("input", calculateSIP);
+});
+
+calculateSIP();
 </script>
+
   <!---yha se sip calculator end ho rha hai -->
 
 
