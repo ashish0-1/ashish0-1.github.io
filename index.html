@@ -453,6 +453,18 @@ function drawSIPGrowthChart(p, years, monthlyRate) {
   ctx.strokeStyle = "#2675a6";
   ctx.lineWidth = 3;
   ctx.stroke();
+// Blue line data point markers
+points.forEach(function(point) {
+  const x = padding + (point.year / years) * chartWidth;
+  const y = height - padding -
+    (point.invested / maxValue) * chartHeight;
+
+  ctx.beginPath();
+  ctx.arc(x, y, 3, 0, Math.PI * 2);
+  ctx.fillStyle = "#2675a6";
+  ctx.fill();
+});
+  
 
   // Draw future value line
   ctx.beginPath();
@@ -472,6 +484,18 @@ function drawSIPGrowthChart(p, years, monthlyRate) {
   ctx.strokeStyle = "#31a36b";
   ctx.lineWidth = 3;
   ctx.stroke();
+// Green line data point markers
+points.forEach(function(point) {
+  const x = padding + (point.year / years) * chartWidth;
+  const y = height - padding -
+    (point.future / maxValue) * chartHeight;
+
+  ctx.beginPath();
+  ctx.arc(x, y, 3, 0, Math.PI * 2);
+  ctx.fillStyle = "#31a36b";
+  ctx.fill();
+});
+  
 }
 
   // yaha se js ka graph chart js end hai 
