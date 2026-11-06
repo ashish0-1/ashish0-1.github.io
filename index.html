@@ -297,6 +297,20 @@ style="width:160px;height:160px;object-fit:cover;border-radius:50%;border:4px so
     style="width:100%;height:250px;display:block;">
   </canvas>
 
+<div style="display:flex;justify-content:center;gap:25px;flex-wrap:wrap;margin-top:15px;font-size:13px;">
+
+  <span>
+    <span style="display:inline-block;width:12px;height:12px;background:#2675a6;border-radius:50%;"></span>
+    Invested Amount
+  </span>
+
+  <span>
+    <span style="display:inline-block;width:12px;height:12px;background:#31a36b;border-radius:50%;"></span>
+    Estimated Future Value
+  </span>
+
+</div>
+
 </div>
  <!---chart graph ke liye html end here---->   
 
@@ -349,6 +363,7 @@ function calculateSIP() {
 }
 
 //yaha se js ka graph chart js start hai 
+
 function drawSIPGrowthChart(p, years, monthlyRate) {
   const canvas = document.getElementById("sipGrowthChart");
   const ctx = canvas.getContext("2d");
@@ -363,7 +378,6 @@ function drawSIPGrowthChart(p, years, monthlyRate) {
 
   for (let year = 0; year <= years; year++) {
     const months = year * 12;
-
     const invested = p * months;
 
     const future = monthlyRate === 0
@@ -372,32 +386,62 @@ function drawSIPGrowthChart(p, years, monthlyRate) {
 
     points.push({
       year: year,
-      value: future
+      invested: invested,
+      future: future
     });
   }
 
-  const maxValue = Math.max(...points.map(point => point.value), 1);
+  const maxValue = Math.max(
+    ...points.map(point => point.future),
+    1
+  );
 
-  const padding = 35;
+  const padding = 45;
   const chartWidth = width - padding * 2;
   const chartHeight = height - padding * 2;
 
   ctx.clearRect(0, 0, width, height);
 
+  // Draw horizontal grid lines
+  ctx.font = "10px Arial";
+  ctx.textAlign = "right";
+  ctx.fillStyle = "#666";
   ctx.strokeStyle = "#dddddd";
   ctx.lineWidth = 1;
 
-  ctx.beginPath();
-  ctx.moveTo(padding, padding);
-  ctx.lineTo(padding, height - padding);
-  ctx.lineTo(width - padding, height - padding);
-  ctx.stroke();
+  for (let i = 0; i <= 4; i++) {
+    const y = height - padding - (i / 4) * chartHeight;
+    const value = (maxValue * i) / 4;
 
+    ctx.beginPath();
+    ctx.moveTo(padding, y);
+    ctx.lineTo(width - padding, y);
+    ctx.stroke();
+
+    ctx.fillText(
+      "₹" + Math.round(value).toLocaleString("en-IN"),
+      padding - 5,
+      y + 4
+    );
+  }
+
+  // Draw X-axis year labels
+  ctx.textAlign = "center";
+
+  for (let i = 0; i <= 4; i++) {
+    const year = Math.round((years * i) / 4);
+    const x = padding + (i / 4) * chartWidth;
+
+    ctx.fillText(year + "Y", x, height - 12);
+  }
+
+  // Draw invested amount line
   ctx.beginPath();
 
   points.forEach((point, index) => {
-    const x = padding + (index / years) * chartWidth;
-    const y = height - padding - (point.value / maxValue) * chartHeight;
+    const x = padding + (point.year / years) * chartWidth;
+    const y = height - padding -
+      (point.invested / maxValue) * chartHeight;
 
     if (index === 0) {
       ctx.moveTo(x, y);
@@ -409,7 +453,27 @@ function drawSIPGrowthChart(p, years, monthlyRate) {
   ctx.strokeStyle = "#2675a6";
   ctx.lineWidth = 3;
   ctx.stroke();
+
+  // Draw future value line
+  ctx.beginPath();
+
+  points.forEach((point, index) => {
+    const x = padding + (point.year / years) * chartWidth;
+    const y = height - padding -
+      (point.future / maxValue) * chartHeight;
+
+    if (index === 0) {
+      ctx.moveTo(x, y);
+    } else {
+      ctx.lineTo(x, y);
+    }
+  });
+
+  ctx.strokeStyle = "#31a36b";
+  ctx.lineWidth = 3;
+  ctx.stroke();
 }
+
   // yaha se js ka graph chart js end hai 
   
 ["sipAmount", "sipYears", "sipRate"].forEach(function(id) {
