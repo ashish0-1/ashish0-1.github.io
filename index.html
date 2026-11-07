@@ -512,15 +512,19 @@ points.forEach(function(point) {
 
   canvas.onclick = function(event) {
   const rect = canvas.getBoundingClientRect();
-  const mouseX = event.clientX - rect.left;
+  const scaleX = canvas.width / rect.width;
+  const scaleY = canvas.height / rect.height;
+
+  const mouseX = (event.clientX - rect.left) * scaleX;
+  const mouseY = (event.clientY - rect.top) * scaleY;
 
   let nearestPoint = chartPoints[0];
   let minDistance = Infinity;
 
   chartPoints.forEach(function(point) {
-   const distance = Math.min(
-  Math.abs(point.investedX - mouseX),
-  Math.abs(point.futureX - mouseX)
+  const distance = Math.min(
+  Math.hypot(point.investedX - mouseX, point.investedY - mouseY),
+  Math.hypot(point.futureX - mouseX, point.futureY - mouseY)
 );
 
     if (distance < minDistance) {
@@ -529,7 +533,7 @@ points.forEach(function(point) {
     }
   });
 
-  if (minDistance > 12) return;
+  if (minDistance > 8) return;
 
   const returns = nearestPoint.future - nearestPoint.invested;
   const tooltip = document.getElementById("sipChartTooltip");
