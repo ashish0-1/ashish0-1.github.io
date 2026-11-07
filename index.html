@@ -518,7 +518,10 @@ points.forEach(function(point) {
   let minDistance = Infinity;
 
   chartPoints.forEach(function(point) {
-    const distance = Math.abs(point.investedX - mouseX);
+   const distance = Math.min(
+  Math.abs(point.investedX - mouseX),
+  Math.abs(point.futureX - mouseX)
+);
 
     if (distance < minDistance) {
       minDistance = distance;
@@ -526,7 +529,7 @@ points.forEach(function(point) {
     }
   });
 
-  if (minDistance > 20) return;
+  if (minDistance > 12) return;
 
   const returns = nearestPoint.future - nearestPoint.invested;
   const tooltip = document.getElementById("sipChartTooltip");
