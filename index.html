@@ -424,9 +424,16 @@ function drawSIPGrowthChart(p, years, monthlyRate) {
     1
   );
 
-  const padding = 75;
-  const chartWidth = width - padding * 2;
-  const chartHeight = height - padding * 2;
+ctx.font = "10px Arial";
+
+const maxLabelWidth = ctx.measureText(
+  "₹" + Math.round(maxValue).toLocaleString("en-IN")
+).width;
+
+const padding = Math.max(75, Math.ceil(maxLabelWidth) + 15);
+
+const chartWidth = width - padding * 2;
+const chartHeight = height - padding * 2;
 
   ctx.clearRect(0, 0, width, height);
 
