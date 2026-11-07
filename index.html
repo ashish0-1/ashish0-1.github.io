@@ -554,6 +554,7 @@ points.forEach(function(point) {
 ["sipAmount", "sipYears", "sipRate"].forEach(function(id) {
   document.getElementById(id).addEventListener("input", calculateSIP);
 });
+  window.addEventListener("resize", calculateSIP);
 
 // js reset btn function here start
 
