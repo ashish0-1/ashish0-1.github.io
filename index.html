@@ -213,7 +213,9 @@ style="width:160px;height:160px;object-fit:cover;border-radius:50%;border:4px so
   </p>
 
   <div style="max-width:650px;margin:auto;background:#f0f5fa;padding:25px;border-radius:14px;">
-
+<div id="sipError"
+     style="display:none;color:#c0392b;background:#fdecea;padding:10px;border-radius:8px;margin-bottom:15px;font-size:14px;">
+</div>
     <div style="margin-bottom:24px;">
       <label><strong>Monthly SIP Amount</strong></label>
       <h3 id="sipAmountDisplay" style="color:#17618b;margin:8px 0;">₹2,000</h3>
@@ -333,7 +335,9 @@ function calculateSIP() {
   const p = Number(document.getElementById("sipAmount").value);
   const years = Number(document.getElementById("sipYears").value);
   const rate = Number(document.getElementById("sipRate").value);
-  if (
+const errorBox = document.getElementById("sipError");
+
+if (
   !Number.isFinite(p) ||
   !Number.isFinite(years) ||
   !Number.isFinite(rate) ||
@@ -341,9 +345,12 @@ function calculateSIP() {
   years < 1 || years > 40 ||
   rate < 0 || rate > 20
 ) {
-  alert("Please enter valid SIP values.");
+  errorBox.textContent = "Please enter valid SIP values.";
+  errorBox.style.display = "block";
   return;
 }
+
+errorBox.style.display = "none";
 
   const months = years * 12;
   const monthlyRate = rate / 1200;
