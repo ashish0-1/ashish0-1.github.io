@@ -333,6 +333,17 @@ function calculateSIP() {
   const p = Number(document.getElementById("sipAmount").value);
   const years = Number(document.getElementById("sipYears").value);
   const rate = Number(document.getElementById("sipRate").value);
+  if (
+  !Number.isFinite(p) ||
+  !Number.isFinite(years) ||
+  !Number.isFinite(rate) ||
+  p < 500 || p > 50000 ||
+  years < 1 || years > 40 ||
+  rate < 0 || rate > 20
+) {
+  alert("Please enter valid SIP values.");
+  return;
+}
 
   const months = years * 12;
   const monthlyRate = rate / 1200;
