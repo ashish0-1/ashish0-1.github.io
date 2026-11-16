@@ -757,13 +757,21 @@ const pageSections = document.querySelectorAll(
 function updateActiveLink() {
   let currentSection = "";
 
-  pageSections.forEach(function(section) {
-    const sectionTop = section.offsetTop;
+  // Check if page reached the bottom
+  if (
+    window.innerHeight + window.scrollY >=
+    document.documentElement.scrollHeight - 5
+  ) {
+    currentSection = "contact";
+  } else {
+    pageSections.forEach(function(section) {
+      const sectionTop = section.offsetTop;
 
-    if (window.scrollY >= sectionTop - 150) {
-      currentSection = section.id;
-    }
-  });
+      if (window.scrollY >= sectionTop - 150) {
+        currentSection = section.id;
+      }
+    });
+  }
 
   navLinks.querySelectorAll("a").forEach(function(link) {
     link.classList.toggle(
