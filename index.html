@@ -794,6 +794,19 @@ function updateActiveLink() {
 window.addEventListener("scroll", updateActiveLink);
 
 updateActiveLink();
+
+
+  // Close mobile menu when clicking outside
+document.addEventListener("click", function(event) {
+  if (
+    !menuToggle.contains(event.target) &&
+    !navLinks.contains(event.target)
+  ) {
+    navLinks.classList.remove("active");
+    menuToggle.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+  }
+});
   
 </script>
 
