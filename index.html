@@ -807,6 +807,15 @@ document.addEventListener("click", function(event) {
     menuToggle.setAttribute("aria-expanded", "false");
   }
 });
+
+  // Close mobile menu with Escape key
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    navLinks.classList.remove("active");
+    menuToggle.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+  }
+});
   
 </script>
 
