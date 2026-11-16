@@ -192,7 +192,23 @@
     text-align: center;
   }
 }
-    
+
+    /* Hamburger animation */
+.menu-toggle span {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
   </style>
 </head>
 
@@ -714,11 +730,13 @@ menuToggle.addEventListener("click", function () {
   const isOpen = navLinks.classList.contains("active");
 
   menuToggle.setAttribute("aria-expanded", isOpen);
+  menuToggle.classList.toggle("open", isOpen);
 });
 
 navLinks.querySelectorAll("a").forEach(function(link) {
   link.addEventListener("click", function() {
     navLinks.classList.remove("active");
+    menuToggle.classList.remove("open");
     menuToggle.setAttribute("aria-expanded", "false");
   });
 });
