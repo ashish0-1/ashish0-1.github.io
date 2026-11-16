@@ -209,6 +209,14 @@
 .menu-toggle.open span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
+
+/* Active navigation link */
+.nav-links a.active {
+  background: #104767;
+  color: #ffffff;
+  border-bottom: 3px solid #ffffff;
+}
+    
   </style>
 </head>
 
@@ -740,6 +748,34 @@ navLinks.querySelectorAll("a").forEach(function(link) {
     menuToggle.setAttribute("aria-expanded", "false");
   });
 });
+
+  // Active navigation on scroll
+const pageSections = document.querySelectorAll(
+  "#home, #about, #services, #blogs, #sip-calculator, #contact"
+);
+
+function updateActiveLink() {
+  let currentSection = "";
+
+  pageSections.forEach(function(section) {
+    const sectionTop = section.offsetTop;
+
+    if (window.scrollY >= sectionTop - 150) {
+      currentSection = section.id;
+    }
+  });
+
+  navLinks.querySelectorAll("a").forEach(function(link) {
+    link.classList.toggle(
+      "active",
+      link.getAttribute("href") === "#" + currentSection
+    );
+  });
+}
+
+window.addEventListener("scroll", updateActiveLink);
+
+updateActiveLink();
   
 </script>
 
