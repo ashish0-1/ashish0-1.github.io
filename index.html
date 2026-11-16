@@ -105,6 +105,23 @@
       .hero h1 { font-size: 29px; }
       .hero { padding: 55px 18px; }
       section { margin: 18px 10px; padding: 25px 17px; }
+            .blog-card {
+        padding: 18px;
+        border-radius: 10px;
+      }
+
+      .blog-card h3 {
+        font-size: 18px;
+      }
+
+      .blog-card p {
+        font-size: 14px;
+      }
+
+      .blog-card a {
+        display: inline-block;
+        padding: 8px 0;
+      }
     }
 /* Navigation bar */
 .main-nav {
@@ -234,8 +251,49 @@ header[id] {
   outline-offset: 4px;
   border-radius: 6px;
 }
+
+
+/* Blog card styling */
+.blog-card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.blog-card h3 {
+  color: #17618b;
+  margin-bottom: 12px;
+}
+
+.blog-card p {
+  color: #444444;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.blog-card a {
+  color: #17618b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.blog-card a:hover {
+  text-decoration: underline;
+}
+
+
+    
     
   </style>
+
+  
 </head>
 
 <body>
@@ -348,7 +406,7 @@ header[id] {
 
   <div class="services">
 
-    <div class="service">
+  <div class="blog-card">
       <h3>Mutual Fund Diversification क्या है?</h3>
       <p>
         जानिए Diversification क्या है और निवेश में जोखिम फैलाना क्यों जरूरी है।
