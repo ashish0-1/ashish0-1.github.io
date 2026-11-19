@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta name="google-site-verification" content="4wlU5K1oPrFCUbC63AVYnXDBVsWuP-c-42F0Ov51gLw" />
   <meta charset="UTF-8">
@@ -8,48 +8,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Ashish Yadav MFD | Mutual Fund Distributor</title>
-  <meta name="description" content="Ashish Yadav, AMFI Registered Mutual Fund Distributor, ARN 356436. Get information about SIP and lump sum mutual fund investments.">
-  <meta name="keywords" content="Ashish Yadav MFD, Ashish Yadav Chiraiyakot, Mutual Fund Distributor, SIP, Lucknow, Chiraiyakot">
+  <meta name="description"
+    content="Ashish Yadav, AMFI Registered Mutual Fund Distributor, ARN 356436. Get information about SIP and lump sum mutual fund investments.">
+  <meta name="keywords"
+    content="Ashish Yadav MFD, Ashish Yadav Chiraiyakot, Mutual Fund Distributor, SIP, Lucknow, Chiraiyakot">
   <meta name="author" content="Ashish Yadav">
-<!-- Canonical URL -->
-<link rel="canonical" href="https://ashish0-1.github.io/">
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://ashish0-1.github.io/">
 
-<!-- Open Graph: Social Media Preview -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://ashish0-1.github.io/">
-<meta property="og:site_name" content="Ashish Yadav MFD">
+  <!-- Open Graph: Social Media Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ashish0-1.github.io/">
+  <meta property="og:site_name" content="Ashish Yadav MFD">
 
-<!-- Twitter / X Preview -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ashish Yadav MFD | Mutual Fund Distributor">
-<meta name="twitter:description" content="AMFI Registered Mutual Fund Distributor, ARN 356436. Information about SIP and lump sum mutual fund investment options.">
+  <!-- Twitter / X Preview -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ashish Yadav MFD | Mutual Fund Distributor">
+  <meta name="twitter:description"
+    content="AMFI Registered Mutual Fund Distributor, ARN 356436. Information about SIP and lump sum mutual fund investment options.">
   <meta property="og:title" content="Ashish Yadav MFD">
   <meta property="og:description" content="Mutual Fund Distribution Services | ARN 356436">
-<!---favicon icon start here -->
-<!-- Animated Favicon -->
-<link rel="icon"
-      type="image/gif"
-      href="ashish-yadav-animated-favicon.gif">
 
-<!-- PNG Fallback -->
-<link rel="icon"
-      type="image/png"
-      sizes="128x128"
-      href="ashish-yadav-favicon.png">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-<!-- ICO Fallback -->
-<link rel="alternate icon"
-      type="image/x-icon"
-      href="favicon.ico">
-<!---favicon icon end here-->
+
+  <!---favicon icon start here -->
+  <!-- Animated Favicon -->
+  <link rel="icon" type="image/gif" href="ashish-yadav-animated-favicon.gif">
+
+  <!-- PNG Fallback -->
+  <link rel="icon" type="image/png" sizes="128x128" href="ashish-yadav-favicon.png">
+
+  <!-- ICO Fallback -->
+  <link rel="alternate icon" type="image/x-icon" href="favicon.ico">
+  <!---favicon icon end here-->
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background: #f4f7fb;
       color: #182638;
       line-height: 1.7;
     }
+
     header {
       background: #102c4a;
       color: white;
@@ -60,16 +67,34 @@
       flex-wrap: wrap;
       gap: 10px;
     }
-    header h2 { font-size: 21px; }
-    header span { color: #b8dcff; font-size: 13px; }
+
+    header h2 {
+      font-size: 21px;
+    }
+
+    header span {
+      color: #b8dcff;
+      font-size: 13px;
+    }
+
     .hero {
-      background: linear-gradient(135deg,#102c4a,#17618b);
+      background: linear-gradient(135deg, #102c4a, #17618b);
       color: white;
       text-align: center;
       padding: 75px 20px;
     }
-    .hero h1 { font-size: 38px; margin-bottom: 12px; }
-    .hero p { font-size: 17px; max-width: 650px; margin: auto; }
+
+    .hero h1 {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      max-width: 650px;
+      margin: auto;
+    }
+
     .tag {
       display: inline-block;
       margin-top: 20px;
@@ -78,6 +103,7 @@
       border-radius: 30px;
       color: white;
     }
+
     .btn {
       display: inline-block;
       margin: 22px 6px 0;
@@ -88,6 +114,7 @@
       font-weight: bold;
       text-decoration: none;
     }
+
     section {
       max-width: 1050px;
       margin: 35px auto;
@@ -95,31 +122,71 @@
       background: white;
       border-radius: 12px;
     }
+
     h2.section-title {
       color: #123b60;
       text-align: center;
       margin-bottom: 20px;
     }
+
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 18px;
     }
+
+    /* Tablet Responsive */
+    @media (max-width: 768px) {
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 480px) {
+      .services {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .service {
+        padding: 18px;
+      }
+
+      .service-category {
+        font-size: 21px;
+      }
+    }
+
     .service {
       background: #f0f5fa;
       padding: 22px;
       border-radius: 10px;
       border-bottom: 3px solid #2675a6;
     }
-    .service h3 { color: #174a70; margin-bottom: 8px; }
-    .contact { text-align: center; }
-    .contact a { color: #12618c; font-weight: bold; }
+
+    .service h3 {
+      color: #174a70;
+      margin-bottom: 8px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      color: #12618c;
+      font-weight: bold;
+    }
+
     footer {
       background: #102c4a;
       color: white;
       text-align: center;
       padding: 25px 15px;
     }
+
     .disclaimer {
       font-size: 13px;
       color: #555;
@@ -128,11 +195,22 @@
       border-radius: 8px;
       margin-top: 15px;
     }
+
     @media(max-width:600px) {
-      .hero h1 { font-size: 29px; }
-      .hero { padding: 55px 18px; }
-      section { margin: 18px 10px; padding: 25px 17px; }
-            .blog-card {
+      .hero h1 {
+        font-size: 29px;
+      }
+
+      .hero {
+        padding: 55px 18px;
+      }
+
+      section {
+        margin: 18px 10px;
+        padding: 25px 17px;
+      }
+
+      .blog-card {
         padding: 18px;
         border-radius: 10px;
       }
@@ -150,858 +228,1083 @@
         padding: 8px 0;
       }
     }
-/* Navigation bar */
-.main-nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #17618b;
-  padding: 12px 15px;
-}
 
-/* Desktop navigation links */
-.nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
+    /* Navigation bar */
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #17618b;
+      padding: 12px 15px;
+    }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 600;
-  transition: background 0.3s;
-}
+    /* Desktop navigation links */
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-/* Navigation Hover Effect */
-.main-nav a {
-  transition: all 0.3s ease;
-}
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
 
-.main-nav a:hover {
-  background: white;
-  color: #17618b;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
+    /* Navigation Hover Effect */
+    .main-nav a {
+      transition: all 0.3s ease;
+    }
 
-/* Home Active Link Hover Fix */
-.main-nav a.active:hover {
-  background: white;
-  color: #17618b;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-/* Navigation Hover Effect */
-.nav-links a:hover {
-  background: #ffffff;
-  color: #17618b;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
+    .main-nav a:hover {
+      background: white;
+      color: #17618b;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
 
-/* Hamburger button */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 42px;
-  height: 42px;
-  padding: 8px;
-  background: transparent;
-  border: 2px solid white;
-  border-radius: 6px;
-  cursor: pointer;
-}
+    /* Home Active Link Hover Fix */
+    .main-nav a.active:hover {
+      background: white;
+      color: #17618b;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
 
-.menu-toggle span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background: white;
-  border-radius: 3px;
-}
+    /* Navigation Hover Effect */
+    .nav-links a:hover {
+      background: #ffffff;
+      color: #17618b;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
 
-/* Mobile navigation */
-@media (max-width: 600px) {
-  .main-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 10px 12px;
-  }
+    /* Hamburger button */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 42px;
+      height: 42px;
+      padding: 8px;
+      background: transparent;
+      border: 2px solid white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
 
-  .menu-toggle {
-    display: flex;
-  }
+    .menu-toggle span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background: white;
+      border-radius: 3px;
+    }
 
-  .nav-links {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 5px;
-    padding-top: 10px;
-  }
+    /* Mobile navigation */
+    @media (max-width: 600px) {
+      .main-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 10px 12px;
+      }
 
-  .nav-links.active {
-    display: flex;
-  }
+      .menu-toggle {
+        display: flex;
+      }
 
-  .nav-links a {
-    display: block;
-    text-align: center;
-  }
-}
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+        padding-top: 10px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        display: block;
+        text-align: center;
+      }
+    }
 
     /* Hamburger animation */
-.menu-toggle span {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
+    .menu-toggle span {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
 
-.menu-toggle.open span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
+    .menu-toggle.open span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
 
-.menu-toggle.open span:nth-child(2) {
-  opacity: 0;
-}
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
 
-.menu-toggle.open span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
+    .menu-toggle.open span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
 
-/* Active navigation link */
-.nav-links a.active {
-  background: #104767;
-  color: #ffffff;
-  border-bottom: 3px solid #ffffff;
-}
-
-
-/* Homepage hyperlink styling */
-a {
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a:focus-visible {
-    outline: 2px solid #17618b;
-    outline-offset: 4px;
-    border-radius: 3px;
-}
+    /* Active navigation link */
+    .nav-links a.active {
+      background: #104767;
+      color: #ffffff;
+      border-bottom: 3px solid #ffffff;
+    }
 
 
+    /* Homepage hyperlink styling */
+    a {
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
 
-html {
-  scroll-behavior: smooth;
-}
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a:focus-visible {
+      outline: 2px solid #17618b;
+      outline-offset: 4px;
+      border-radius: 3px;
+    }
+
+
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     /* Prevent sticky navbar from covering section headings */
-section[id],
-header[id] {
-  scroll-margin-top: 90px;
-}
+    section[id],
+    header[id] {
+      scroll-margin-top: 90px;
+    }
 
     /* Keyboard accessibility focus */
-.menu-toggle:focus-visible,
-.nav-links a:focus-visible {
-  outline: 3px solid #ffcc00;
-  outline-offset: 4px;
-  border-radius: 6px;
+    .menu-toggle:focus-visible,
+    .nav-links a:focus-visible {
+      outline: 3px solid #ffcc00;
+      outline-offset: 4px;
+      border-radius: 6px;
+    }
+
+
+    /* Blog card styling */
+    .blog-card {
+      background: #ffffff;
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .blog-card h3 {
+      color: #17618b;
+      margin-bottom: 12px;
+    }
+
+    .blog-card p {
+      color: #444444;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .blog-card a {
+      color: #17618b;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .blog-card a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* Services Category Heading */
+    .service-category {
+      color: #17618b;
+      font-size: 24px;
+      text-align: center;
+      margin-top: 35px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #17618b;
+    }
+
+    /* Service Card Hover Effect */
+    .service {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .service:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Service Heading with Font Awesome Icons */
+    .service h3 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #174a70;
+      margin-bottom: 8px;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    .service h3 i {
+      color: #17618b;
+      font-size: 20px;
+      min-width: 24px;
+      text-align: center;
+    }
+
+    /* Professional Service Card Design */
+    .service {
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid #e1eaf2;
+      border-bottom: 4px solid #2675a6;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    /* Card Hover Effect */
+    .service:hover {
+      transform: translateY(-6px);
+      border-color: #2675a6;
+      box-shadow: 0 10px 24px rgba(23, 97, 139, 0.15);
+    }
+
+    /* Service Description */
+    .service p {
+      color: #526575;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    /* Equal Height Service Cards */
+    .service {
+      height: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Consistent Description Spacing */
+    .service p {
+      margin-top: 8px;
+      flex-grow: 1;
+    }
+
+    /* Service Icon Styling */
+    .service h3 i {
+      width: 38px;
+      height: 38px;
+      min-width: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #e5f2fa;
+      color: #17618b;
+      border-radius: 50%;
+      font-size: 17px;
+    }
+
+
+    /* Compact Service Enquiry Button */
+    .service-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 14px;
+      padding: 8px 12px;
+      background: #17618b;
+      color: white !important;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .service-btn i {
+      font-size: 14px;
+    }
+
+    .service-btn:hover {
+      background: #104767;
+      transform: translateY(-2px);
+    }
+
+/* Final Mobile and Button Alignment Fix */
+
+.service-btn {
+  align-self: flex-start;
 }
 
-
-/* Blog card styling */
-.blog-card {
-  background: #ffffff;
-  padding: 22px;
-  border-radius: 12px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+@media (max-width: 480px) {
+  .service {
+    padding: 18px;
+  }
 }
 
-.blog-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-}
-
-.blog-card h3 {
-  color: #17618b;
-  margin-bottom: 12px;
-}
-
-.blog-card p {
-  color: #444444;
-  line-height: 1.7;
-  margin-bottom: 16px;
-}
-
-.blog-card a {
-  color: #17618b;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.blog-card a:hover {
-  text-decoration: underline;
-}
-
-
-    
-    
   </style>
 
-  
+
 </head>
 
 <body>
 
-<header id="home">
-  <h2>Ashish Yadav MFD</h2>
-  <span>ARN: 356436</span>
-</header>
+  <header id="home">
+    <h2>Ashish Yadav MFD</h2>
+    <span>ARN: 356436</span>
+  </header>
 
   <!--nav baar code here start -->
-<nav class="main-nav">
+  <nav class="main-nav">
 
-  <button class="menu-toggle" id="menuToggle"
-          aria-label="Toggle navigation"
-          aria-expanded="false">
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
 
-    <span></span>
-    <span></span>
-    <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
 
-  </button>
+    </button>
 
-  <div class="nav-links" id="navLinks">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#blogs">Blogs</a>
-    <a href="#sip-calculator">SIP Calculator</a>
-    <a href="#contact">Contact</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#sip-calculator">SIP Calculator</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+  </nav>
+  <!-----nav baar code end here ---->
+
+  <div class="hero">
+    <!-- Optimized profile photo -->
+    <img src="ashish-yadav.jpg" alt="Ashish Yadav - AMFI Registered Mutual Fund Distributor" width="160" height="160"
+      loading="eager" fetchpriority="high" decoding="async"
+      style="width:160px;height:160px;object-fit:cover;border-radius:50%;border:4px solid white;margin-bottom:20px;">
+    <h1>Ashish Yadav</h1>
+    <p>AMFI Registered Mutual Fund Distributor</p>
+    <p>Helping investors understand Mutual Fund investment options through SIP and Lump Sum distribution services.</p>
+    <div class="tag">ARN – 356436</div>
+    <br>
+    <a class="btn" href="#contact">Contact Me</a>
+    <a class="btn" href="https://wa.me/917275707579">WhatsApp</a>
   </div>
 
-</nav>
-<!-----nav baar code end here ---->
-  
-<div class="hero">
-<!-- Optimized profile photo -->
-<img
-  src="ashish-yadav.jpg"
-  alt="Ashish Yadav - AMFI Registered Mutual Fund Distributor"
-  width="160"
-  height="160"
-  loading="eager"
-  fetchpriority="high"
-  decoding="async"
-  style="width:160px;height:160px;object-fit:cover;border-radius:50%;border:4px solid white;margin-bottom:20px;"
->
-  <h1>Ashish Yadav</h1>
-  <p>AMFI Registered Mutual Fund Distributor</p>
-  <p>Helping investors understand Mutual Fund investment options through SIP and Lump Sum distribution services.</p>
-  <div class="tag">ARN – 356436</div>
-  <br>
-  <a class="btn" href="#contact">Contact Me</a>
-  <a class="btn" href="https://wa.me/917275707579">WhatsApp</a>
-</div>
-
-<section id="about">
-  <h2 class="section-title">About Me | मेरे बारे में</h2>
-  <p>
-    Welcome! I am Ashish Yadav, an AMFI Registered Mutual Fund Distributor.
-    I help individuals understand mutual fund investment options according
-    to their financial needs, goals and risk preferences.
-  </p>
-  <br>
-  <p>
-    नमस्कार! मैं आशीष यादव, AMFI Registered Mutual Fund Distributor हूँ।
-    मेरा उद्देश्य निवेशकों को उनकी जरूरतों और जोखिम क्षमता के अनुसार
-    म्यूचुअल फंड निवेश विकल्पों की जानकारी और वितरण सेवाएँ प्रदान करना है।
-  </p>
-</section>
-
-<section id="services">
-  <h2 class="section-title">My Services | मेरी सेवाएँ</h2>
-  <div class="services">
-    <div class="service">
-      <h3>SIP Investment</h3>
-      <p>Understand the Systematic Investment Plan (SIP) and its features.</p>
-    </div>
-    <div class="service">
-      <h3>Lump Sum Investment</h3>
-      <p>Information about one-time mutual fund investment options.</p>
-    </div>
-    <div class="service">
-      <h3>Mutual Fund Guidance</h3>
-      <p>Understand available mutual fund options according to your needs and risk profile.</p>
-    </div>
-    <div class="service">
-      <h3>Investor Support</h3>
-      <p>Assistance with mutual fund distribution-related queries and processes.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2 class="section-title">Why Connect With Me?</h2>
-  <p>
-    ✔ Personal communication<br>
-    ✔ Information about SIP and Lump Sum investments<br>
-    ✔ Support with mutual fund investment processes<br>
-    ✔ Investor-focused service
-  </p>
-</section>
-
-   <!--yha se blog section suru ho raha hai --->
-<section id="blogs">
-  <h2 class="section-title">Latest Blogs | निवेश की जानकारी</h2>
-
-  <p style="text-align:center;margin-bottom:25px;">
-    Learn about SIP, Mutual Funds and smart investment habits.
-  </p>
-
-  <div class="services">
-
-  <div class="blog-card">
-      <h3>Mutual Fund Diversification क्या है?</h3>
-      <p>
-        जानिए Diversification क्या है और निवेश में जोखिम फैलाना क्यों जरूरी है।
-      </p>
-      <a href="mutual-fund-diversification.html">
-        Read Full Blog →
-      </a>
-    </div>
-<div class="blog-card">
-
-    <h3>SIP क्या है? पूरी जानकारी</h3>
-
+  <section id="about">
+    <h2 class="section-title">About Me | मेरे बारे में</h2>
     <p>
-        SIP क्या है, यह कैसे काम करती है, इसके फायदे और
-        जोखिम क्या हैं तथा निवेश शुरू करने से पहले किन
-        बातों का ध्यान रखना चाहिए।
+      Welcome! I am Ashish Yadav, an AMFI Registered Mutual Fund Distributor.
+      I help individuals understand mutual fund investment options according
+      to their financial needs, goals and risk preferences.
+    </p>
+    <br>
+    <p>
+      नमस्कार! मैं आशीष यादव, AMFI Registered Mutual Fund Distributor हूँ।
+      मेरा उद्देश्य निवेशकों को उनकी जरूरतों और जोखिम क्षमता के अनुसार
+      म्यूचुअल फंड निवेश विकल्पों की जानकारी और वितरण सेवाएँ प्रदान करना है।
+    </p>
+  </section>
+
+
+  <section id="services">
+    <h2 class="section-title">My Services | मेरी सेवाएँ</h2>
+
+    <h3 class="service-category">Mutual Fund Services</h3>
+
+    <div class="services">
+      <div class="service">
+        <h3><i class="fa-solid fa-chart-line"></i> SIP Investment</h3>
+        <p>Understand Systematic Investment Plans (SIP) and their features.</p>
+
+        <a class="service-btn"
+          href="https://wa.me/917275707579?text=Hello%2C%20I%20want%20to%20know%20about%20your%20Mutual%20Fund%20Sip%20Services%2E"
+          target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Enquire Now
+        </a>
+
+      </div>
+
+      <div class="service">
+        <h3><i class="fa-solid fa-sack-dollar"></i> Lump Sum Investment</h3>
+        <p>Information about one-time mutual fund investment options.</p>
+
+        <a class="service-btn"
+          href="https://wa.me/917275707579?text=Hello%2C%20I%20want%20to%20know%20about%20Lump%20Sum%20Investment%2E"
+          target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Enquire Now
+        </a>
+
+      </div>
+
+      <div class="service">
+        <h3><i class="fa-solid fa-hand-holding-dollar"></i> Mutual Fund Guidance</h3>
+        <p>Understand available mutual fund options according to your needs and risk profile.</p>
+
+        <a class="service-btn" href="https://wa.me/917275707579?text=Hello%2C%20I%20want%20Mutual%20Fund%20Guidance%2E"
+          target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Enquire Now
+        </a>
+
+      </div>
+
+      <div class="service">
+        <h3><i class="fa-solid fa-headset"></i> Investor Support</h3>
+        <p>Assistance with mutual fund distribution-related queries and processes.</p>
+
+        <a class="service-btn" href="https://wa.me/917275707579?text=Hello%2C%20I%20need%20Investor%20Support%2E"
+          target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Enquire Now
+        </a>
+
+      </div>
+    </div>
+
+    <h3 class="service-category">IT & Digital Services</h3>
+
+    <div class="services">
+      <div class="service">
+        <h3><i class="fa-solid fa-code"></i> Website Development</h3>
+        <p>Responsive and professional websites for businesses, individuals and organizations.</p>
+
+        <a class="service-btn"
+          href="https://wa.me/917275707579?text=Hello%2C%20I%20want%20a%20Website%20Development%20service."
+          target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Enquire Now
+        </a>
+
+      </div>
+
+      <div class="service">
+        <h3><i class="fa-solid fa-gears"></i> Website Management</h3>
+        <p>Website maintenance, content updates, bug fixing and technical improvements.</p>
+
+        <a class="service-btn"
+          href="https://wa.me/917275707579?text=Hello%2C%20I%20want%20Website%20Management%20service." target="_blank"
+          rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Enquire Now
+        </a>
+
+      </div>
+
+      <div class="service">
+        <h3><i class="fa-solid fa-laptop-code"></i> Web Application Development</h3>
+        <p>Custom web-based applications and business solutions.</p>
+
+        <a class="service-btn"
+          href="https://wa.me/917275707579?text=Hello%2C%20I%20want%20to%20know%20about%20web%20application%20development%20Services."
+          target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Enquire Now
+        </a>
+
+      </div>
+
+      <div class="service">
+        <h3><i class="fa-solid fa-magnifying-glass-chart"></i> SEO & Digital Presence</h3>
+        <p>Basic SEO setup, Google Search Console and website visibility improvements.</p>
+
+        <a class="service-btn"
+          href="https://wa.me/917275707579?text=Hello%2C%20I%20want%20SEO%20and%20Digital%20Presence%20services."
+          target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Enquire Now
+        </a>
+
+      </div>
+
+      <div class="service">
+        <h3><i class="fa-solid fa-database"></i> Database & Software Solutions</h3>
+        <p>Database management and customized software solutions.</p>
+
+        <a class="service-btn"
+          href="https://wa.me/917275707579?text=Hello%2C%20I%20want%20Database%20and%20Software%20Solutions."
+          target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Enquire Now
+        </a>
+
+      </div>
+
+      <div class="service">
+        <h3><i class="fa-solid fa-screwdriver-wrench"></i> Technical Support</h3>
+        <p>Website troubleshooting, performance improvements and technical assistance.</p>
+
+        <a class="service-btn" href="https://wa.me/917275707579?text=Hello%2C%20I%20need%20Technical%20Support%2E"
+          target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i> Enquire Now
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <h2 class="section-title">Why Connect With Me?</h2>
+    <p>
+      ✔ Personal communication<br>
+      ✔ Information about SIP and Lump Sum investments<br>
+      ✔ Support with mutual fund investment processes<br>
+      ✔ Investor-focused service
+    </p>
+  </section>
+
+  <!--yha se blog section suru ho raha hai --->
+  <section id="blogs">
+    <h2 class="section-title">Latest Blogs | निवेश की जानकारी</h2>
+
+    <p style="text-align:center;margin-bottom:25px;">
+      Learn about SIP, Mutual Funds and smart investment habits.
     </p>
 
-    <a href="mutual-fund-sip-guide.html">
-        Read Full Blog →
-    </a>
+    <div class="services">
 
-</div>
+      <div class="blog-card">
+        <h3>Mutual Fund Diversification क्या है?</h3>
+        <p>
+          जानिए Diversification क्या है और निवेश में जोखिम फैलाना क्यों जरूरी है।
+        </p>
+        <a href="mutual-fund-diversification.html">
+          Read Full Blog →
+        </a>
+      </div>
+      <div class="blog-card">
 
-  </div>
-</section> 
+        <h3>SIP क्या है? पूरी जानकारी</h3>
+
+        <p>
+          SIP क्या है, यह कैसे काम करती है, इसके फायदे और
+          जोखिम क्या हैं तथा निवेश शुरू करने से पहले किन
+          बातों का ध्यान रखना चाहिए।
+        </p>
+
+        <a href="mutual-fund-sip-guide.html">
+          Read Full Blog →
+        </a>
+
+      </div>
+
+    </div>
+  </section>
   <!---blog section end here --->
 
 
-  
- <!-- yaha se sip calculator suru ho rha hai -->
+  <!-- yaha se sip calculator suru ho rha hai -->
 
-<section id="sip-calculator">
-  <h2 class="section-title">SIP Calculator | SIP कैलकुलेटर</h2>
+  <section id="sip-calculator">
+    <h2 class="section-title">SIP Calculator | SIP कैलकुलेटर</h2>
 
-  <p style="text-align:center;margin-bottom:25px;">
-    Calculate your estimated SIP investment growth.
-  </p>
-
-  <div style="max-width:650px;margin:auto;background:#f0f5fa;padding:25px;border-radius:14px;">
-<div id="sipError"
-     style="display:none;color:#c0392b;background:#fdecea;padding:10px;border-radius:8px;margin-bottom:15px;font-size:14px;">
-</div>
-    <div style="margin-bottom:24px;">
-      <label><strong>Monthly SIP Amount</strong></label>
-      <h3 id="sipAmountDisplay" style="color:#17618b;margin:8px 0;">₹2,000</h3>
-      <input type="range" id="sipAmount" min="500" max="50000"
-        step="500" value="2000" style="width:100%;accent-color:#17618b;">
-      <div style="display:flex;justify-content:space-between;font-size:12px;color:#666;">
-        <span>₹500</span><span>₹50,000</span>
-      </div>
-    </div>
-
-    <div style="margin-bottom:24px;">
-      <label><strong>Investment Period</strong></label>
-      <h3 id="sipYearsDisplay" style="color:#17618b;margin:8px 0;">10 Years</h3>
-      <input type="range" id="sipYears" min="1" max="40"
-        step="1" value="10" style="width:100%;accent-color:#17618b;">
-      <div style="display:flex;justify-content:space-between;font-size:12px;color:#666;">
-        <span>1 Year</span><span>40 Years</span>
-      </div>
-    </div>
-
-    <div style="margin-bottom:24px;">
-      <label><strong>Expected Annual Return</strong></label>
-      <h3 id="sipRateDisplay" style="color:#17618b;margin:8px 0;">12%</h3>
-      <input type="range" id="sipRate" min="0" max="20"
-        step="0.5" value="12" style="width:100%;accent-color:#17618b;">
-      <div style="display:flex;justify-content:space-between;font-size:12px;color:#666;">
-        <span>0%</span><span>20%</span>
-      </div>
-    </div>
-    <!--reset btn here start-->
-<div style="text-align:center;margin-top:20px;">
-  <button type="button" onclick="resetSIPCalculator()"
-    style="background:#17618b;color:white;border:none;padding:12px 25px;border-radius:8px;cursor:pointer;font-size:15px;">
-    ↻ Reset Calculator
-  </button>
-</div>
-    <!---reset btn here end --->
-
-    <div style="background:white;padding:20px;border-radius:10px;margin-top:25px;">
-      <p style="color:#666;">Estimated Future Value</p>
-      <h2 id="futureValue" style="color:#17618b;font-size:30px;margin:8px 0;">₹0</h2>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px;">
-        <div style="background:#eaf3ff;padding:14px;border-radius:8px;">
-          <p style="font-size:12px;color:#555;">Invested Amount</p>
-          <h3 id="investedAmount">₹0</h3>
-        </div>
-        <div style="background:#e8f7ef;padding:14px;border-radius:8px;">
-          <p style="font-size:12px;color:#555;">Estimated Returns</p>
-          <h3 id="estimatedReturns">₹0</h3>
-        </div>
-      </div>
-
-      <h3 style="margin-top:25px;margin-bottom:12px;">Investment Breakdown</h3>
-
-     <div style="display:flex;height:28px;width:100%;background:#ddd;border-radius:8px;overflow:hidden;">
-  <div id="investedBar"
-       style="width:50%;background:#2675a6;height:100%;"></div>
-
-  <div id="returnsBar"
-       style="width:50%;background:#31a36b;height:100%;"></div>
-</div>
-
-    <div style="display:flex;justify-content:space-between;gap:10px;margin-top:12px;font-size:12px;">
-  <span>🔵 Invested: <strong id="investedPercent">0%</strong></span>
-  <span>🟢 Returns: <strong id="returnsPercent">0%</strong></span>
-</div>
-    </div>
-
-    
-<!--chart graph ke liye html start here -->
-<div style="background:white;padding:20px;border-radius:10px;margin-top:25px;">
-
-  <h3 style="margin-bottom:15px;">Investment Growth Chart</h3>
-
-  <p style="font-size:13px;color:#666;margin-bottom:15px;">
-    See how your SIP investment may grow over time.
-  </p>
-
-  <canvas id="sipGrowthChart"
-    style="width:100%;height:250px;display:block;">
-  </canvas>
-
-  <div id="sipChartTooltip"
-     style="display:none;margin-top:12px;padding:12px;background:#f1f6fa;border-radius:8px;font-size:14px;line-height:1.8;">
-</div>
-
-<div style="display:flex;justify-content:center;gap:25px;flex-wrap:wrap;margin-top:15px;font-size:13px;">
-
-  <span>
-    <span style="display:inline-block;width:12px;height:12px;background:#2675a6;border-radius:50%;"></span>
-    Invested Amount
-  </span>
-
-  <span>
-    <span style="display:inline-block;width:12px;height:12px;background:#31a36b;border-radius:50%;"></span>
-    Estimated Future Value
-  </span>
-
-</div>
-
-</div>
- <!---chart graph ke liye html end here---->   
-
-    
-    <p style="font-size:12px;color:#666;margin-top:18px;">
-      Disclaimer: This calculator provides illustrative estimates only.
-      Mutual fund returns are market-linked and are not guaranteed.
-      Actual returns may be higher or lower. Calculation assumes
-      monthly investments at the end of each month.
+    <p style="text-align:center;margin-bottom:25px;">
+      Calculate your estimated SIP investment growth.
     </p>
-  </div>
-</section>
 
-<script>
-function calculateSIP() {
-  const p = Number(document.getElementById("sipAmount").value);
-  const years = Number(document.getElementById("sipYears").value);
-  const rate = Number(document.getElementById("sipRate").value);
-const errorBox = document.getElementById("sipError");
+    <div style="max-width:650px;margin:auto;background:#f0f5fa;padding:25px;border-radius:14px;">
+      <div id="sipError"
+        style="display:none;color:#c0392b;background:#fdecea;padding:10px;border-radius:8px;margin-bottom:15px;font-size:14px;">
+      </div>
+      <div style="margin-bottom:24px;">
+        <label><strong>Monthly SIP Amount</strong></label>
+        <h3 id="sipAmountDisplay" style="color:#17618b;margin:8px 0;">₹2,000</h3>
+        <input type="range" id="sipAmount" min="500" max="50000" step="500" value="2000"
+          style="width:100%;accent-color:#17618b;">
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:#666;">
+          <span>₹500</span><span>₹50,000</span>
+        </div>
+      </div>
 
-if (
-  !Number.isFinite(p) ||
-  !Number.isFinite(years) ||
-  !Number.isFinite(rate) ||
-  p < 500 || p > 50000 ||
-  years < 1 || years > 40 ||
-  rate < 0 || rate > 20
-) {
-  errorBox.textContent = "Please enter valid SIP values.";
-  errorBox.style.display = "block";
-  return;
-}
+      <div style="margin-bottom:24px;">
+        <label><strong>Investment Period</strong></label>
+        <h3 id="sipYearsDisplay" style="color:#17618b;margin:8px 0;">10 Years</h3>
+        <input type="range" id="sipYears" min="1" max="40" step="1" value="10" style="width:100%;accent-color:#17618b;">
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:#666;">
+          <span>1 Year</span><span>40 Years</span>
+        </div>
+      </div>
 
-errorBox.style.display = "none";
+      <div style="margin-bottom:24px;">
+        <label><strong>Expected Annual Return</strong></label>
+        <h3 id="sipRateDisplay" style="color:#17618b;margin:8px 0;">12%</h3>
+        <input type="range" id="sipRate" min="0" max="20" step="0.5" value="12"
+          style="width:100%;accent-color:#17618b;">
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:#666;">
+          <span>0%</span><span>20%</span>
+        </div>
+      </div>
+      <!--reset btn here start-->
+      <div style="text-align:center;margin-top:20px;">
+        <button type="button" onclick="resetSIPCalculator()"
+          style="background:#17618b;color:white;border:none;padding:12px 25px;border-radius:8px;cursor:pointer;font-size:15px;">
+          ↻ Reset Calculator
+        </button>
+      </div>
+      <!---reset btn here end --->
 
-  const months = years * 12;
-  const monthlyRate = rate / 1200;
-  const invested = p * months;
+      <div style="background:white;padding:20px;border-radius:10px;margin-top:25px;">
+        <p style="color:#666;">Estimated Future Value</p>
+        <h2 id="futureValue" style="color:#17618b;font-size:30px;margin:8px 0;">₹0</h2>
 
-  const future = monthlyRate === 0
-    ? invested
-    : p * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px;">
+          <div style="background:#eaf3ff;padding:14px;border-radius:8px;">
+            <p style="font-size:12px;color:#555;">Invested Amount</p>
+            <h3 id="investedAmount">₹0</h3>
+          </div>
+          <div style="background:#e8f7ef;padding:14px;border-radius:8px;">
+            <p style="font-size:12px;color:#555;">Estimated Returns</p>
+            <h3 id="estimatedReturns">₹0</h3>
+          </div>
+        </div>
 
-  const returns = future - invested;
+        <h3 style="margin-top:25px;margin-bottom:12px;">Investment Breakdown</h3>
 
-  function formatINR(value) {
-    return "₹" + Math.round(value).toLocaleString("en-IN");
-  }
+        <div style="display:flex;height:28px;width:100%;background:#ddd;border-radius:8px;overflow:hidden;">
+          <div id="investedBar" style="width:50%;background:#2675a6;height:100%;"></div>
 
-  document.getElementById("sipAmountDisplay").textContent = formatINR(p);
-  document.getElementById("sipYearsDisplay").textContent = years + " Years";
-  document.getElementById("sipRateDisplay").textContent = rate + "%";
+          <div id="returnsBar" style="width:50%;background:#31a36b;height:100%;"></div>
+        </div>
 
-  document.getElementById("investedAmount").textContent = formatINR(invested);
-  document.getElementById("estimatedReturns").textContent = formatINR(returns);
-  document.getElementById("futureValue").textContent = formatINR(future);
+        <div style="display:flex;justify-content:space-between;gap:10px;margin-top:12px;font-size:12px;">
+          <span>🔵 Invested: <strong id="investedPercent">0%</strong></span>
+          <span>🟢 Returns: <strong id="returnsPercent">0%</strong></span>
+        </div>
+      </div>
 
-  const investedPercent = future > 0 ? (invested / future) * 100 : 100;
-  const returnsPercent = 100 - investedPercent;
 
-  document.getElementById("investedBar").style.width = investedPercent + "%";
-  document.getElementById("returnsBar").style.width = returnsPercent + "%";
-  document.getElementById("investedPercent").textContent = investedPercent.toFixed(1) + "%";
-  document.getElementById("returnsPercent").textContent = returnsPercent.toFixed(1) + "%";
-  drawSIPGrowthChart(p, years, monthlyRate);
-}
+      <!--chart graph ke liye html start here -->
+      <div style="background:white;padding:20px;border-radius:10px;margin-top:25px;">
 
-//yaha se js ka graph chart js start hai 
+        <h3 style="margin-bottom:15px;">Investment Growth Chart</h3>
 
-function drawSIPGrowthChart(p, years, monthlyRate) {
-  const canvas = document.getElementById("sipGrowthChart");
-  const ctx = canvas.getContext("2d");
+        <p style="font-size:13px;color:#666;margin-bottom:15px;">
+          See how your SIP investment may grow over time.
+        </p>
 
-  const width = canvas.clientWidth;
-  const height = 250;
+        <canvas id="sipGrowthChart" style="width:100%;height:250px;display:block;">
+        </canvas>
 
-  canvas.width = width;
-  canvas.height = height;
+        <div id="sipChartTooltip"
+          style="display:none;margin-top:12px;padding:12px;background:#f1f6fa;border-radius:8px;font-size:14px;line-height:1.8;">
+        </div>
 
-  const points = [];
-  const chartPoints = [];
+        <div style="display:flex;justify-content:center;gap:25px;flex-wrap:wrap;margin-top:15px;font-size:13px;">
 
-  for (let year = 0; year <= years; year++) {
-    const months = year * 12;
-    const invested = p * months;
+          <span>
+            <span style="display:inline-block;width:12px;height:12px;background:#2675a6;border-radius:50%;"></span>
+            Invested Amount
+          </span>
 
-    const future = monthlyRate === 0
-      ? invested
-      : p * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
+          <span>
+            <span style="display:inline-block;width:12px;height:12px;background:#31a36b;border-radius:50%;"></span>
+            Estimated Future Value
+          </span>
 
-    points.push({
-      year: year,
-      invested: invested,
-      future: future
-    });
-    chartPoints.push({
-     year: year,
-     invested: invested,
-     future: future
-    });
-  }
+        </div>
 
-  const maxValue = Math.max(
-    ...points.map(point => point.future),
-    1
-  );
+      </div>
+      <!---chart graph ke liye html end here---->
 
-ctx.font = "10px Arial";
 
-const maxLabelWidth = ctx.measureText(
-  "₹" + Math.round(maxValue).toLocaleString("en-IN")
-).width;
+      <p style="font-size:12px;color:#666;margin-top:18px;">
+        Disclaimer: This calculator provides illustrative estimates only.
+        Mutual fund returns are market-linked and are not guaranteed.
+        Actual returns may be higher or lower. Calculation assumes
+        monthly investments at the end of each month.
+      </p>
+    </div>
+  </section>
 
-const padding = Math.max(75, Math.ceil(maxLabelWidth) + 15);
+  <script>
+    function calculateSIP() {
+      const p = Number(document.getElementById("sipAmount").value);
+      const years = Number(document.getElementById("sipYears").value);
+      const rate = Number(document.getElementById("sipRate").value);
+      const errorBox = document.getElementById("sipError");
 
-const chartWidth = width - padding * 2;
-const chartHeight = height - padding * 2;
+      if (
+        !Number.isFinite(p) ||
+        !Number.isFinite(years) ||
+        !Number.isFinite(rate) ||
+        p < 500 || p > 50000 ||
+        years < 1 || years > 40 ||
+        rate < 0 || rate > 20
+      ) {
+        errorBox.textContent = "Please enter valid SIP values.";
+        errorBox.style.display = "block";
+        return;
+      }
 
-  ctx.clearRect(0, 0, width, height);
+      errorBox.style.display = "none";
 
-  // Draw horizontal grid lines
-  ctx.font = "10px Arial";
-  ctx.textAlign = "right";
-  ctx.fillStyle = "#666";
-  ctx.strokeStyle = "#dddddd";
-  ctx.lineWidth = 1;
+      const months = years * 12;
+      const monthlyRate = rate / 1200;
+      const invested = p * months;
 
-  for (let i = 0; i <= 4; i++) {
-    const y = height - padding - (i / 4) * chartHeight;
-    const value = (maxValue * i) / 4;
+      const future = monthlyRate === 0
+        ? invested
+        : p * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
 
-    ctx.beginPath();
-    ctx.moveTo(padding, y);
-    ctx.lineTo(width - padding, y);
-    ctx.stroke();
+      const returns = future - invested;
 
-    ctx.fillText(
-      "₹" + Math.round(value).toLocaleString("en-IN"),
-      padding - 5,
-      y + 4
-    );
-  }
+      function formatINR(value) {
+        return "₹" + Math.round(value).toLocaleString("en-IN");
+      }
 
-  // Draw X-axis year labels
-  ctx.textAlign = "center";
+      document.getElementById("sipAmountDisplay").textContent = formatINR(p);
+      document.getElementById("sipYearsDisplay").textContent = years + " Years";
+      document.getElementById("sipRateDisplay").textContent = rate + "%";
 
-  for (let i = 0; i <= 4; i++) {
-    const year = Math.round((years * i) / 4);
-    const x = padding + (i / 4) * chartWidth;
+      document.getElementById("investedAmount").textContent = formatINR(invested);
+      document.getElementById("estimatedReturns").textContent = formatINR(returns);
+      document.getElementById("futureValue").textContent = formatINR(future);
 
-    ctx.fillText(year + "Y", x, height - 12);
-  }
+      const investedPercent = future > 0 ? (invested / future) * 100 : 100;
+      const returnsPercent = 100 - investedPercent;
 
-  // Draw invested amount line
-  ctx.beginPath();
-
-  points.forEach((point, index) => {
-    const x = padding + (point.year / years) * chartWidth;
-    const y = height - padding -
-      (point.invested / maxValue) * chartHeight;
-
-    if (index === 0) {
-      ctx.moveTo(x, y);
-    } else {
-      ctx.lineTo(x, y);
+      document.getElementById("investedBar").style.width = investedPercent + "%";
+      document.getElementById("returnsBar").style.width = returnsPercent + "%";
+      document.getElementById("investedPercent").textContent = investedPercent.toFixed(1) + "%";
+      document.getElementById("returnsPercent").textContent = returnsPercent.toFixed(1) + "%";
+      drawSIPGrowthChart(p, years, monthlyRate);
     }
-  });
 
-  ctx.strokeStyle = "#2675a6";
-  ctx.lineWidth = 3;
-  ctx.stroke();
-// Blue line data point markers
-points.forEach(function(point) {
-  const x = padding + (point.year / years) * chartWidth;
-  const y = height - padding -
-    (point.invested / maxValue) * chartHeight;
-  chartPoints.find(p => p.year === point.year).investedX = x;
-  chartPoints.find(p => p.year === point.year).investedY = y;
+    //yaha se js ka graph chart js start hai 
 
-  ctx.beginPath();
-  ctx.arc(x, y, 3, 0, Math.PI * 2);
-  ctx.fillStyle = "#2675a6";
-  ctx.fill();
-});
-  
+    function drawSIPGrowthChart(p, years, monthlyRate) {
+      const canvas = document.getElementById("sipGrowthChart");
+      const ctx = canvas.getContext("2d");
 
-  // Draw future value line
-  ctx.beginPath();
+      const width = canvas.clientWidth;
+      const height = 250;
 
-  points.forEach((point, index) => {
-    const x = padding + (point.year / years) * chartWidth;
-    const y = height - padding -
-      (point.future / maxValue) * chartHeight;
-    chartPoints.find(p => p.year === point.year).futureX = x;
-    chartPoints.find(p => p.year === point.year).futureY = y;
+      canvas.width = width;
+      canvas.height = height;
 
-    if (index === 0) {
-      ctx.moveTo(x, y);
-    } else {
-      ctx.lineTo(x, y);
-    }
-  });
+      const points = [];
+      const chartPoints = [];
 
-  ctx.strokeStyle = "#31a36b";
-  ctx.lineWidth = 3;
-  ctx.stroke();
-// Green line data point markers
-points.forEach(function(point) {
-  const x = padding + (point.year / years) * chartWidth;
-  const y = height - padding -
-    (point.future / maxValue) * chartHeight;
+      for (let year = 0; year <= years; year++) {
+        const months = year * 12;
+        const invested = p * months;
 
-  ctx.beginPath();
-  ctx.arc(x, y, 3, 0, Math.PI * 2);
-  ctx.fillStyle = "#31a36b";
-  ctx.fill();
-});
+        const future = monthlyRate === 0
+          ? invested
+          : p * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
 
-  canvas.onclick = function(event) {
-  const rect = canvas.getBoundingClientRect();
-  const scaleX = canvas.width / rect.width;
-  const scaleY = canvas.height / rect.height;
+        points.push({
+          year: year,
+          invested: invested,
+          future: future
+        });
+        chartPoints.push({
+          year: year,
+          invested: invested,
+          future: future
+        });
+      }
 
-  const mouseX = (event.clientX - rect.left) * scaleX;
-  const mouseY = (event.clientY - rect.top) * scaleY;
+      const maxValue = Math.max(
+        ...points.map(point => point.future),
+        1
+      );
 
-  let nearestPoint = chartPoints[0];
-  let minDistance = Infinity;
+      ctx.font = "10px Arial";
 
-  chartPoints.forEach(function(point) {
-  const distance = Math.min(
-  Math.hypot(point.investedX - mouseX, point.investedY - mouseY),
-  Math.hypot(point.futureX - mouseX, point.futureY - mouseY)
-);
+      const maxLabelWidth = ctx.measureText(
+        "₹" + Math.round(maxValue).toLocaleString("en-IN")
+      ).width;
 
-    if (distance < minDistance) {
-      minDistance = distance;
-      nearestPoint = point;
-    }
-  });
+      const padding = Math.max(75, Math.ceil(maxLabelWidth) + 15);
 
-  if (minDistance > 8) return;
+      const chartWidth = width - padding * 2;
+      const chartHeight = height - padding * 2;
 
-  const returns = nearestPoint.future - nearestPoint.invested;
-  const tooltip = document.getElementById("sipChartTooltip");
+      ctx.clearRect(0, 0, width, height);
 
-  tooltip.style.display = "block";
-  tooltip.innerHTML = `
+      // Draw horizontal grid lines
+      ctx.font = "10px Arial";
+      ctx.textAlign = "right";
+      ctx.fillStyle = "#666";
+      ctx.strokeStyle = "#dddddd";
+      ctx.lineWidth = 1;
+
+      for (let i = 0; i <= 4; i++) {
+        const y = height - padding - (i / 4) * chartHeight;
+        const value = (maxValue * i) / 4;
+
+        ctx.beginPath();
+        ctx.moveTo(padding, y);
+        ctx.lineTo(width - padding, y);
+        ctx.stroke();
+
+        ctx.fillText(
+          "₹" + Math.round(value).toLocaleString("en-IN"),
+          padding - 5,
+          y + 4
+        );
+      }
+
+      // Draw X-axis year labels
+      ctx.textAlign = "center";
+
+      for (let i = 0; i <= 4; i++) {
+        const year = Math.round((years * i) / 4);
+        const x = padding + (i / 4) * chartWidth;
+
+        ctx.fillText(year + "Y", x, height - 12);
+      }
+
+      // Draw invested amount line
+      ctx.beginPath();
+
+      points.forEach((point, index) => {
+        const x = padding + (point.year / years) * chartWidth;
+        const y = height - padding -
+          (point.invested / maxValue) * chartHeight;
+
+        if (index === 0) {
+          ctx.moveTo(x, y);
+        } else {
+          ctx.lineTo(x, y);
+        }
+      });
+
+      ctx.strokeStyle = "#2675a6";
+      ctx.lineWidth = 3;
+      ctx.stroke();
+      // Blue line data point markers
+      points.forEach(function (point) {
+        const x = padding + (point.year / years) * chartWidth;
+        const y = height - padding -
+          (point.invested / maxValue) * chartHeight;
+        chartPoints.find(p => p.year === point.year).investedX = x;
+        chartPoints.find(p => p.year === point.year).investedY = y;
+
+        ctx.beginPath();
+        ctx.arc(x, y, 3, 0, Math.PI * 2);
+        ctx.fillStyle = "#2675a6";
+        ctx.fill();
+      });
+
+
+      // Draw future value line
+      ctx.beginPath();
+
+      points.forEach((point, index) => {
+        const x = padding + (point.year / years) * chartWidth;
+        const y = height - padding -
+          (point.future / maxValue) * chartHeight;
+        chartPoints.find(p => p.year === point.year).futureX = x;
+        chartPoints.find(p => p.year === point.year).futureY = y;
+
+        if (index === 0) {
+          ctx.moveTo(x, y);
+        } else {
+          ctx.lineTo(x, y);
+        }
+      });
+
+      ctx.strokeStyle = "#31a36b";
+      ctx.lineWidth = 3;
+      ctx.stroke();
+      // Green line data point markers
+      points.forEach(function (point) {
+        const x = padding + (point.year / years) * chartWidth;
+        const y = height - padding -
+          (point.future / maxValue) * chartHeight;
+
+        ctx.beginPath();
+        ctx.arc(x, y, 3, 0, Math.PI * 2);
+        ctx.fillStyle = "#31a36b";
+        ctx.fill();
+      });
+
+      canvas.onclick = function (event) {
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+
+        const mouseX = (event.clientX - rect.left) * scaleX;
+        const mouseY = (event.clientY - rect.top) * scaleY;
+
+        let nearestPoint = chartPoints[0];
+        let minDistance = Infinity;
+
+        chartPoints.forEach(function (point) {
+          const distance = Math.min(
+            Math.hypot(point.investedX - mouseX, point.investedY - mouseY),
+            Math.hypot(point.futureX - mouseX, point.futureY - mouseY)
+          );
+
+          if (distance < minDistance) {
+            minDistance = distance;
+            nearestPoint = point;
+          }
+        });
+
+        if (minDistance > 8) return;
+
+        const returns = nearestPoint.future - nearestPoint.invested;
+        const tooltip = document.getElementById("sipChartTooltip");
+
+        tooltip.style.display = "block";
+        tooltip.innerHTML = `
     <strong>Year ${nearestPoint.year}</strong><br>
     Invested Amount: ₹${nearestPoint.invested.toLocaleString("en-IN")}<br>
     Estimated Future Value: ₹${nearestPoint.future.toLocaleString("en-IN")}<br>
     Estimated Returns: ₹${returns.toLocaleString("en-IN")}
   `;
-};
-  
-}
+      };
 
-  // yaha se js ka graph chart js end hai 
-  
-["sipAmount", "sipYears", "sipRate"].forEach(function(id) {
-  document.getElementById(id).addEventListener("input", calculateSIP);
-});
-  window.addEventListener("resize", calculateSIP);
+    }
 
-// js reset btn function here start
+    // yaha se js ka graph chart js end hai 
 
-function resetSIPCalculator() {
-  document.getElementById("sipAmount").value = 2000;
-  document.getElementById("sipYears").value = 10;
-  document.getElementById("sipRate").value = 12;
+    ["sipAmount", "sipYears", "sipRate"].forEach(function (id) {
+      document.getElementById(id).addEventListener("input", calculateSIP);
+    });
+    window.addEventListener("resize", calculateSIP);
 
-  calculateSIP();
-}  
-  //js reset btn function end here
-calculateSIP();
+    // js reset btn function here start
 
-  const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+    function resetSIPCalculator() {
+      document.getElementById("sipAmount").value = 2000;
+      document.getElementById("sipYears").value = 10;
+      document.getElementById("sipRate").value = 12;
 
-menuToggle.addEventListener("click", function () {
-  navLinks.classList.toggle("active");
+      calculateSIP();
+    }
+    //js reset btn function end here
+    calculateSIP();
 
-  const isOpen = navLinks.classList.contains("active");
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
 
-  menuToggle.setAttribute("aria-expanded", isOpen);
-  menuToggle.classList.toggle("open", isOpen);
-});
+    menuToggle.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
 
-navLinks.querySelectorAll("a").forEach(function(link) {
-  link.addEventListener("click", function() {
-    navLinks.classList.remove("active");
-    menuToggle.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-  });
-});
+      const isOpen = navLinks.classList.contains("active");
 
-  // Active navigation on scroll
-const pageSections = document.querySelectorAll(
-  "#home, #about, #services, #blogs, #sip-calculator, #contact"
-);
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.classList.toggle("open", isOpen);
+    });
 
-function updateActiveLink() {
-  let currentSection = "";
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+        menuToggle.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
 
-  // Check if page reached the bottom
-  if (
-    window.innerHeight + window.scrollY >=
-    document.documentElement.scrollHeight - 5
-  ) {
-    currentSection = "contact";
-  } else {
-    pageSections.forEach(function(section) {
-      const sectionTop = section.offsetTop;
+    // Active navigation on scroll
+    const pageSections = document.querySelectorAll(
+      "#home, #about, #services, #blogs, #sip-calculator, #contact"
+    );
 
-      if (window.scrollY >= sectionTop - 150) {
-        currentSection = section.id;
+    function updateActiveLink() {
+      let currentSection = "";
+
+      // Check if page reached the bottom
+      if (
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 5
+      ) {
+        currentSection = "contact";
+      } else {
+        pageSections.forEach(function (section) {
+          const sectionTop = section.offsetTop;
+
+          if (window.scrollY >= sectionTop - 150) {
+            currentSection = section.id;
+          }
+        });
+      }
+
+      navLinks.querySelectorAll("a").forEach(function (link) {
+        link.classList.toggle(
+          "active",
+          link.getAttribute("href") === "#" + currentSection
+        );
+      });
+    }
+
+    window.addEventListener("scroll", updateActiveLink);
+
+    updateActiveLink();
+
+
+    // Close mobile menu when clicking outside
+    document.addEventListener("click", function (event) {
+      if (
+        !menuToggle.contains(event.target) &&
+        !navLinks.contains(event.target)
+      ) {
+        navLinks.classList.remove("active");
+        menuToggle.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
       }
     });
-  }
 
-  navLinks.querySelectorAll("a").forEach(function(link) {
-    link.classList.toggle(
-      "active",
-      link.getAttribute("href") === "#" + currentSection
-    );
-  });
-}
+    // Close mobile menu with Escape key
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        navLinks.classList.remove("active");
+        menuToggle.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
 
-window.addEventListener("scroll", updateActiveLink);
-
-updateActiveLink();
-
-
-  // Close mobile menu when clicking outside
-document.addEventListener("click", function(event) {
-  if (
-    !menuToggle.contains(event.target) &&
-    !navLinks.contains(event.target)
-  ) {
-    navLinks.classList.remove("active");
-    menuToggle.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-  }
-});
-
-  // Close mobile menu with Escape key
-document.addEventListener("keydown", function(event) {
-  if (event.key === "Escape") {
-    navLinks.classList.remove("active");
-    menuToggle.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-  }
-});
-  
-</script>
+  </script>
 
   <!---yha se sip calculator end ho rha hai -->
 
 
+  <section class="contact" id="contact">
+    <h2 class="section-title">Contact Ashish Yadav</h2>
+    <p><strong>AMFI Registered Mutual Fund Distributor</strong></p>
+    <p>ARN: 356436</p>
+    <p>Location: Chiraiyakot / Lucknow, Uttar Pradesh</p>
+    <p>Mobile: <a href="tel:+917275707579">7275707579</a></p>
+    <p>Email: <a href="mailto:ashishfinance.mfd@gmail.com">ashishfinance.mfd@gmail.com</a></p>
+    <a class="btn" href="https://wa.me/917275707579">Chat on WhatsApp</a>
+  </section>
 
-  
-
-<section class="contact" id="contact">
-  <h2 class="section-title">Contact Ashish Yadav</h2>
-  <p><strong>AMFI Registered Mutual Fund Distributor</strong></p>
-  <p>ARN: 356436</p>
-  <p>Location: Chiraiyakot / Lucknow, Uttar Pradesh</p>
-  <p>Mobile: <a href="tel:+917275707579">7275707579</a></p>
-  <p>Email: <a href="mailto:ashishfinance.mfd@gmail.com">ashishfinance.mfd@gmail.com</a></p>
-  <a class="btn" href="https://wa.me/917275707579">Chat on WhatsApp</a>
-</section>
-
-<footer>
-  <p>© 2026 Ashish Yadav MFD. All Rights Reserved.</p>
-  <p>Website maintained by Ashish Yadav MFD.</p>
-  <p>ARN: 356436</p>
-  <div class="disclaimer">
-    Mutual Fund investments are subject to market risks, read all scheme
-    related documents carefully. Past performance is not indicative of
-    future returns. Mutual fund investments do not guarantee returns.
-  </div>
-</footer>
+  <footer>
+    <p>© 2026 Ashish Yadav MFD. All Rights Reserved.</p>
+    <p>Website maintained by Ashish Yadav MFD.</p>
+    <p>ARN: 356436</p>
+    <div class="disclaimer">
+      Mutual Fund investments are subject to market risks, read all scheme
+      related documents carefully. Past performance is not indicative of
+      future returns. Mutual fund investments do not guarantee returns.
+    </div>
+  </footer>
 
 </body>
+
 </html>
